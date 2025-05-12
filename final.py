@@ -19,7 +19,7 @@ import numpy as np
 import re
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:shubh100@127.0.0.1/moodflix'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://youdp/dbname'
 app.config['SECRET_KEY'] = 'your_secret_key'
 
 # Initialize extensions
@@ -28,7 +28,7 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 CORS(app)
-API_KEY = 'b4c3fd4bd79a7a30f43668f17e0d25bb'
+API_KEY = 'yourapi'
 
 def convert_to_python_types(data):
     """Recursively convert NumPy int64 to Python int."""
